@@ -127,15 +127,11 @@ print(sorted(a) == sorted(b))
 
 ```python
 text = "apple"
-
-freq = {}
-
-for c in text:
-    freq[c] = freq.get(c, 0) + 1
+freq = {c: text.count(c) for c in text}
 
 print(freq)
-# Output: {'a':1,'p':2,'l':1,'e':1}
 ```
+# Output: {'a': 1, 'p': 2, 'l': 1, 'e': 1}
 
 ## Q16. Capitalize Every Word
 
