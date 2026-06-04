@@ -1,121 +1,143 @@
-# data-analyst-python-prep
+# Data Analyst Python Prep
 
+A structured Python interview preparation repository for Data Analyst, Business Analyst, and Decision Analytics roles (0–2 years experience).
 
----
-
-## 🧠 CORE INTENT OF THIS REPOSITORY
-
-This repository is not just for learning.
-
-It is designed to:
-
-- Generate Data Analyst interview questions
-- Generate coding problems (easy → hard)
-- Generate real-world business case studies
-- Simulate interview rounds
-- Cover 0–2 YOE job-switch requirements
+The goal of this repository is to cover the most commonly tested Python and Pandas concepts, practical business analytics use cases, and interview coding patterns required for data-focused roles.
 
 ---
 
-## 📌 HOW THIS REPOSITORY SHOULD BE USED
+## Repository Structure
 
-Each file represents a **problem domain**, not just a topic list.
-
-From each file, questions should be generated in the form of:
-
-### 1. Coding Questions
-- Data manipulation tasks
-- Pandas transformations
-- Aggregations and joins
-- KPI calculations
-
-### 2. Conceptual Questions
-- Why a method is used
-- Trade-offs (e.g., merge vs join)
-- Business interpretation
-
-### 3. Case-Based Questions
-- Business scenario → dataset → analysis
-- Funnel, cohort, retention problems
-- Revenue and growth analysis
-
----
-
-## 🎯 DOMAIN BREAKDOWN (WHAT EACH FILE REPRESENTS)
-
-### 01_python_pandas_core
-Covers foundational data handling skills used in interviews:
-- Data cleaning and preprocessing
-- Filtering and sorting logic
-- GroupBy and aggregations
-- Joins and dataset merging
-- Handling missing values
+```text
+data-analyst-python-prep/
+│
+├── concepts/
+│   ├── python_concepts.md
+│   ├── pandas_concepts.md
+│   ├── data_cleaning_concepts.md
+│   ├── business_analytics_concepts.md
+│   ├── time_series_concepts.md
+│   └── visualization_concepts.md
+│
+├── coding/
+│   ├── python_basics.py
+│   ├── pandas_basics.py
+│   ├── data_cleaning.py
+│   ├── pandas_operations.py
+│   ├── business_analytics.py
+│   ├── time_series.py
+│   └── interview_questions.py
+│
+└── README.md
+```
 
 ---
 
-### 02_business_analytics_core
-Represents real business analytics problems:
+## Concepts Covered
 
-- KPI calculations (Revenue, ARPU, AOV)
-- Funnel analysis (user journey conversion)
-- Cohort analysis (user grouping over time)
-- Retention and churn analysis
-- Revenue performance analysis
+### Python
+
+* Variables and Data Types
+* Strings
+* Lists, Tuples, Sets, Dictionaries
+* Conditional Statements
+* Loops
+* Functions
+* List Comprehensions
+* Exception Handling
+* File Handling
+* Basic OOP Concepts
+
+### Pandas
+
+* DataFrames and Series
+* Reading and Writing Files
+* Indexing and Selection
+* Filtering and Sorting
+* GroupBy and Aggregation
+* Merge and Join
+* Apply Functions
+* Pivot Tables and Crosstabs
+
+### Data Cleaning
+
+* Missing Values
+* Duplicate Records
+* Outlier Detection
+* Data Type Conversion
+* Data Validation
+
+### Business Analytics
+
+* KPI Calculations
+* Revenue Analysis
+* Customer Segmentation
+* Funnel Analysis
+* Cohort Analysis
+* Retention and Churn Metrics
+
+### Time Series
+
+* DateTime Operations
+* Resampling
+* Rolling Windows
+* Lag and Lead Features
+* Trend Analysis
+
+### Visualization
+
+* Bar Charts
+* Line Charts
+* Histograms
+* Box Plots
+* Scatter Plots
+* Data Visualization Best Practices
 
 ---
 
-### 03_time_series_core
-Covers time-based analytics:
+## Coding Practice
 
-- Rolling averages and smoothing trends
-- Lag and lead comparisons
-- Trend detection over time
+The coding folder contains practical Python and Pandas exercises frequently asked in interviews, including:
 
----
-
-### 04_interview_revision
-Used for final preparation:
-
-- Frequently asked Python interview patterns
-- Frequently repeated Pandas questions
-- Revision of core analytical logic
+* Data Manipulation
+* Data Cleaning
+* Aggregations
+* Joins and Merges
+* Business Case Problems
+* Time Series Analysis
+* Interview Coding Questions
 
 ---
 
-## 🧠 RULES FOR QUESTION GENERATION (IMPORTANT)
+## Target Roles
 
-When generating interview content from this repo:
-
-1. Prioritize real-world business context
-2. Focus on Pandas-heavy operations
-3. Include both coding + reasoning questions
-4. Prefer interview repetition patterns over rare concepts
-5. Increase difficulty from easy → medium → hard
-6. Always tie to business outcome (metrics, KPIs, insights)
-
----
-
-## 🎯 JOB SWITCH ALIGNMENT (2 YOE TARGET)
-
-This repository is aligned with:
-
-- Product-based companies
-- Service-based analytics roles
-- Startup Data Analyst roles
-- Business Analyst roles
-
-Expected skill outcome:
-
-- Strong Pandas proficiency
-- Business KPI understanding
-- Ability to analyze datasets end-to-end
-- Ability to explain insights clearly
-- Comfort with real-world messy data
+* Data Analyst
+* Business Analyst
+* Decision Analytics Associate
+* Reporting Analyst
+* MIS Analyst
+* Junior Data Scientist
+* Analytics Consultant
 
 ---
 
-## 🛠️ TECH STACK
+## Tech Stack
 
-- Python
-- Pandas
-- NumPy (supporting only)
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+
+---
+
+## Outcome
+
+After completing this repository, you should be able to:
+
+* Solve common Python interview questions.
+* Perform data cleaning and transformation tasks.
+* Analyze business datasets using Pandas.
+* Calculate key business metrics and KPIs.
+* Work with time series data.
+* Answer most Python and Pandas questions asked in Data Analyst interviews.
