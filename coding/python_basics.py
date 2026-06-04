@@ -1,240 +1,251 @@
-Q1. Find the data type of a variable
+# Python Basics - Q1 to Q25
 
-Question: Determine the data type of a variable.
+## Q1. Find Data Type
 
+```python
 x = 10
 print(type(x))
+# Output: <class 'int'>
+```
 
-Output
+## Q2. String to Integer
 
-<class 'int'>
-Q2. Convert String to Integer
+```python
 num = "100"
-num = int(num)
-print(num + 50)
+print(int(num) + 50)
+# Output: 150
+```
 
-Output
+## Q3. Integer to String
 
-150
-Q3. Convert Integer to String
+```python
 num = 100
-num = str(num)
-print(num + " is a number")
+print(str(num) + " apples")
+# Output: 100 apples
+```
 
-Output
+## Q4. Swap Two Variables
 
-100 is a number
-Q4. Swap Two Variables
-a = 5
-b = 10
-
+```python
+a, b = 5, 10
 a, b = b, a
-
 print(a, b)
+# Output: 10 5
+```
 
-Output
+## Q5. Check Variable Type
 
-10 5
-Q5. Check Variable Type
+```python
 x = [1, 2, 3]
+print(isinstance(x, list))
+# Output: True
+```
 
-if isinstance(x, list):
-    print("List")
+## Q6. Reverse a String
 
-Output
-
-List
-Q6. Reverse a String
+```python
 text = "python"
 print(text[::-1])
+# Output: nohtyp
+```
 
-Output
+## Q7. Check Palindrome
 
-nohtyp
-Q7. Check Palindrome
+```python
 text = "madam"
+print(text == text[::-1])
+# Output: True
+```
 
-if text == text[::-1]:
-    print("Palindrome")
+## Q8. Count Vowels
 
-Output
-
-Palindrome
-Q8. Count Vowels
+```python
 text = "data analyst"
-
-count = 0
-
-for char in text.lower():
-    if char in "aeiou":
-        count += 1
-
+count = sum(1 for c in text.lower() if c in "aeiou")
 print(count)
+# Output: 4
+```
 
-Output
+## Q9. Count Consonants
 
-4
-Q9. Count Consonants
+```python
 text = "python"
-
-count = 0
-
-for char in text:
-    if char.isalpha() and char.lower() not in "aeiou":
-        count += 1
-
+count = sum(1 for c in text if c.isalpha() and c.lower() not in "aeiou")
 print(count)
+# Output: 4
+```
 
-Output
+## Q10. Count Words
 
-4
-Q10. Count Words
+```python
 sentence = "I love data analytics"
 print(len(sentence.split()))
+# Output: 4
+```
 
-Output
+## Q11. Remove Spaces
 
-4
-Q11. Remove Spaces
+```python
 text = "data analyst"
 print(text.replace(" ", ""))
+# Output: dataanalyst
+```
 
-Output
+## Q12. Find Duplicate Characters
 
-dataanalyst
-Q12. Find Duplicate Characters
+```python
 text = "programming"
-
-duplicates = set()
-
-for char in text:
-    if text.count(char) > 1:
-        duplicates.add(char)
-
+duplicates = {c for c in text if text.count(c) > 1}
 print(duplicates)
+# Output: {'r', 'g', 'm'}
+```
 
-Output
+## Q13. First Non-Repeating Character
 
-{'r', 'g', 'm'}
-Q13. First Non-Repeating Character
+```python
 text = "swiss"
 
-for char in text:
-    if text.count(char) == 1:
-        print(char)
+for c in text:
+    if text.count(c) == 1:
+        print(c)
         break
 
-Output
+# Output: w
+```
 
-w
-Q14. Check Anagram
+## Q14. Check Anagram
+
+```python
 a = "listen"
 b = "silent"
 
 print(sorted(a) == sorted(b))
+# Output: True
+```
 
-Output
+## Q15. Character Frequency
 
-True
-Q15. Character Frequency
+```python
 text = "apple"
 
 freq = {}
 
-for char in text:
-    freq[char] = freq.get(char, 0) + 1
+for c in text:
+    freq[c] = freq.get(c, 0) + 1
 
 print(freq)
+# Output: {'a':1,'p':2,'l':1,'e':1}
+```
 
-Output
+## Q16. Capitalize Every Word
 
-{'a': 1, 'p': 2, 'l': 1, 'e': 1}
-Q16. Capitalize Every Word
+```python
 text = "data analyst"
 print(text.title())
+# Output: Data Analyst
+```
 
-Output
+## Q17. Find Longest Word
 
-Data Analyst
-Q17. Find Longest Word
+```python
 sentence = "I love business analytics"
 
 print(max(sentence.split(), key=len))
+# Output: analytics
+```
 
-Output
+## Q18. Count Substring Occurrences
 
-analytics
-Q18. Count Substring Occurrences
+```python
 text = "banana"
 print(text.count("an"))
+# Output: 2
+```
 
-Output
+## Q19. Replace Word
 
-2
-Q19. Replace a Word
+```python
 text = "I love SQL"
 print(text.replace("SQL", "Python"))
+# Output: I love Python
+```
 
-Output
+## Q20. Check If String Contains Only Digits
 
-I love Python
-Q20. Check If String Contains Only Digits
+```python
 text = "12345"
 print(text.isdigit())
+# Output: True
+```
 
-Output
+## Q21. Find Largest Element
 
-True
-Q21. Find Largest Element
+```python
 numbers = [10, 20, 50, 30]
 print(max(numbers))
+# Output: 50
+```
 
-Output
+## Q22. Find Smallest Element
 
-50
-Q22. Find Smallest Element
+```python
 numbers = [10, 20, 50, 30]
 print(min(numbers))
+# Output: 10
+```
 
-Output
+## Q23. Find Second Largest Element
 
-10
-Q23. Find Second Largest Element
+```python
 numbers = [10, 20, 50, 30]
-numbers.sort()
+
+numbers = sorted(set(numbers))
 
 print(numbers[-2])
+# Output: 30
+```
 
-Output
+## Q24. Remove Duplicates While Preserving Order
 
-30
-Q24. Remove Duplicates
-numbers = [1,1,2,2,3,4]
-print(list(set(numbers)))
+```python
+numbers = [1, 2, 2, 3, 1, 4]
 
-Output
+result = []
 
-[1, 2, 3, 4]
-Q25. Common Elements in Two Lists
-a = [1,2,3]
-b = [2,3,4]
+for n in numbers:
+    if n not in result:
+        result.append(n)
+
+print(result)
+# Output: [1, 2, 3, 4]
+```
+
+## Q25. Find Common Elements Between Two Lists
+
+```python
+a = [1, 2, 3, 4]
+b = [3, 4, 5, 6]
 
 print(list(set(a) & set(b)))
+# Output: [3, 4]
+```
+# Python Basics - Q26 to Q50
 
-Output
+## Q26. Merge Two Lists
 
-[2, 3]
-Q26. Merge Two Lists
-a = [1,2]
-b = [3,4]
+```python
+a = [1, 2]
+b = [3, 4]
 
 print(a + b)
 
-Output
+# Output: [1, 2, 3, 4]
+```
 
-[1, 2, 3, 4]
-Q27. Flatten Nested List
-nested = [[1,2],[3,4]]
+## Q27. Flatten a Nested List
+
+```python
+nested = [[1, 2], [3, 4], [5, 6]]
 
 flat = []
 
@@ -243,147 +254,288 @@ for sublist in nested:
 
 print(flat)
 
-Output
+# Output: [1, 2, 3, 4, 5, 6]
+```
 
-[1, 2, 3, 4]
-Q28. Reverse a List
-numbers = [1,2,3]
+## Q28. Reverse a List
+
+```python
+numbers = [1, 2, 3, 4]
+
 print(numbers[::-1])
 
-Output
+# Output: [4, 3, 2, 1]
+```
 
-[3, 2, 1]
-Q29. Sort a List
-numbers = [4,1,3,2]
+## Q29. Sort a List
+
+```python
+numbers = [4, 1, 3, 2]
+
 numbers.sort()
 
 print(numbers)
 
-Output
+# Output: [1, 2, 3, 4]
+```
 
-[1, 2, 3, 4]
-Q30. Frequency of Elements
-numbers = [1,2,2,3,3,3]
+## Q30. Find Frequency of List Elements
+
+```python
+numbers = [1, 2, 2, 3, 3, 3]
 
 freq = {}
 
 for num in numbers:
-    freq[num] = freq.get(num,0)+1
+    freq[num] = freq.get(num, 0) + 1
 
 print(freq)
 
-Output
+# Output: {1: 1, 2: 2, 3: 3}
+```
 
-{1: 1, 2: 2, 3: 3}
-Q31. Find Missing Number
+## Q31. Count Frequencies Using Dictionary
 
-Use sum of expected range minus actual sum.
+```python
+items = ["apple", "banana", "apple"]
 
-Output Example
+freq = {}
 
-Missing Number = 4
-Q32. Find Duplicate Numbers
+for item in items:
+    freq[item] = freq.get(item, 0) + 1
 
-Output Example
+print(freq)
 
-[2, 4]
-Q33. Rotate List by K Positions
+# Output: {'apple': 2, 'banana': 1}
+```
 
-Output Example
+## Q32. Merge Two Dictionaries
 
-[4, 5, 1, 2, 3]
-Q34. Split List into Chunks
+```python
+d1 = {"a": 1, "b": 2}
+d2 = {"c": 3}
 
-Output Example
+result = {**d1, **d2}
 
-[[1,2],[3,4],[5,6]]
-Q35. Find Pairs with Given Sum
+print(result)
 
-Output Example
+# Output: {'a': 1, 'b': 2, 'c': 3}
+```
 
-[(2,5), (3,4)]
-Q36. Count Frequencies Using Dictionary
+## Q33. Sort Dictionary by Value
 
-Output Example
+```python
+sales = {"A": 300, "B": 100, "C": 200}
 
-{'apple': 2, 'banana': 1}
-Q37. Merge Dictionaries
+result = sorted(sales.items(), key=lambda x: x[1])
 
-Output Example
+print(result)
 
-{'a':1,'b':2,'c':3}
-Q38. Sort Dictionary by Value
+# Output: [('B', 100), ('C', 200), ('A', 300)]
+```
 
-Output Example
+## Q34. Find Key with Maximum Value
 
-[('a',1), ('b',2), ('c',3)]
-Q39. Key with Maximum Value
+```python
+sales = {"A": 300, "B": 100, "C": 500}
 
-Output Example
+print(max(sales, key=sales.get))
 
-sales
-Q40. Invert Dictionary
+# Output: C
+```
 
-Output Example
+## Q35. Invert a Dictionary
 
-{1:'a',2:'b'}
-Q41. Union of Sets
-{1,2,3,4,5}
-Q42. Intersection of Sets
-{3,4}
-Q43. Difference of Sets
-{1,2}
-Q44. FizzBuzz
+```python
+d = {"a": 1, "b": 2}
 
-Output
+result = {v: k for k, v in d.items()}
 
-1
-2
-Fizz
-4
-Buzz
-...
-Q45. Prime Number Check
+print(result)
 
-Output
+# Output: {1: 'a', 2: 'b'}
+```
 
-Prime
-Q46. Generate Prime Numbers in Range
+## Q36. Group Records Using Dictionary
 
-Output
+```python
+employees = [
+    ("IT", "John"),
+    ("HR", "Alice"),
+    ("IT", "Bob")
+]
 
-2 3 5 7 11 13 17 19
-Q47. Factorial
-import math
-print(math.factorial(5))
+groups = {}
 
-Output
+for dept, name in employees:
+    groups.setdefault(dept, []).append(name)
 
-120
-Q48. Fibonacci Series
+print(groups)
 
-Output
+# Output: {'IT': ['John', 'Bob'], 'HR': ['Alice']}
+```
 
-0 1 1 2 3 5 8 13
-Q49. Function to Calculate Average
-def average(nums):
-    return sum(nums)/len(nums)
+## Q37. Access Nested Dictionary
 
-print(average([10,20,30]))
+```python
+employee = {
+    "name": "John",
+    "address": {
+        "city": "Hyderabad"
+    }
+}
 
-Output
+print(employee["address"]["city"])
 
-20.0
-Q50. Employee Class
-class Employee:
+# Output: Hyderabad
+```
 
-    def __init__(self, name, salary):
-        self.name = name
-        self.salary = salary
+## Q38. Union of Sets
 
-    def display(self):
-        print(self.name, self.salary)
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
 
-Output
+print(a | b)
 
-John 50000
+# Output: {1, 2, 3, 4, 5}
+```
+
+## Q39. Intersection of Sets
+
+```python
+a = {1, 2, 3}
+b = {2, 3, 4}
+
+print(a & b)
+
+# Output: {2, 3}
+```
+
+## Q40. Difference of Sets
+
+```python
+a = {1, 2, 3}
+b = {2, 3, 4}
+
+print(a - b)
+
+# Output: {1}
+```
+
+## Q41. Function to Calculate Average
+
+```python
+def average(numbers):
+    return sum(numbers) / len(numbers)
+
+print(average([10, 20, 30]))
+
+# Output: 20.0
+```
+
+## Q42. Function with Default Arguments
+
+```python
+def greet(name="Guest"):
+    print("Hello", name)
+
+greet()
+
+# Output: Hello Guest
+```
+
+## Q43. Lambda Function
+
+```python
+square = lambda x: x * x
+
+print(square(5))
+
+# Output: 25
+```
+
+## Q44. map()
+
+```python
+numbers = [1, 2, 3, 4]
+
+result = list(map(lambda x: x * 2, numbers))
+
+print(result)
+
+# Output: [2, 4, 6, 8]
+```
+
+## Q45. filter()
+
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+
+result = list(filter(lambda x: x % 2 == 0, numbers))
+
+print(result)
+
+# Output: [2, 4, 6]
+```
+
+## Q46. zip()
+
+```python
+names = ["John", "Alice"]
+scores = [80, 90]
+
+result = list(zip(names, scores))
+
+print(result)
+
+# Output: [('John', 80), ('Alice', 90)]
+```
+
+## Q47. enumerate()
+
+```python
+names = ["John", "Alice"]
+
+for index, value in enumerate(names):
+    print(index, value)
+
+# Output:
+# 0 John
+# 1 Alice
+```
+
+## Q48. Read a CSV File
+
+```python
+import pandas as pd
+
+df = pd.read_csv("employees.csv")
+
+print(df.head())
+
+# Output:
+# First 5 rows of the file
+```
+
+## Q49. Handle Division by Zero
+
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+# Output: Cannot divide by zero
+```
+
+## Q50. Handle File Not Found
+
+```python
+try:
+    file = open("data.txt")
+except FileNotFoundError:
+    print("File not found")
+
+# Output: File not found
+```
