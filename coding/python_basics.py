@@ -1,4 +1,4 @@
-# Python Basics - Q1 to Q25
+# Python Basics - Q1 to Q50
 
 ## Q1. Find Data Type
 
