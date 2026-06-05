@@ -225,7 +225,6 @@ b = [3, 4, 5, 6]
 print(list(set(a) & set(b)))
 # Output: [3, 4]
 ```
-# Python Basics - Q26 to Q50
 
 ## Q26. Merge Two Lists
 
